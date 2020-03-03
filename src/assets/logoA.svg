@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080"><defs>
+<style>
+.cls-1{fill:#1546a3;}
+.cls-2{fill:#00ffce;}
+.cls-3{
+    font-size:144.53px;
+    fill:#111;
+    font-family:AvenirLTStd-Black, Avenir LT Std;
+    font-weight:800;
+    letter-spacing:-0.06em;
+}
+.cls-4{letter-spacing:-0.04em;}
+</style></defs>
+<title>logo type</title>
+<rect class="cls-1" x="385.66" y="271.56" width="308.68" height="308.68" rx="54.09"/>
+
+<path class="cls-2" d="M469.3,479.92h35.46a0,0,0,0,1,0,0v35.46a35.46,35.46,0,0,1-35.46,35.46h0a35.46,35.46,0,0,1-35.46-35.46v0a35.46,35.46,0,0,1,35.46-35.46Z"/>
+<path class="cls-2" d="M608.15,390.09s-19.92-.37-138.71-.07c-30,.07-35.6,19.05-35.6,19.05l.05-55.53c0-19.49,17.08-35.29,38.14-35.29H645.51v37.27C645.51,374.61,628.78,390.09,608.15,390.09Z"/>
+<path class="cls-2" d="M541.29,471.15s31.93-.36-75.37-.06c-27.14.07-32.17,19-32.17,19l.05-55.45c0-19.46,15.43-35.24,34.46-35.24H575v37.21C575,455.7,559.93,471.15,541.29,471.15Z"/>
+<text class="cls-3" transform="translate(312.83 755.99)">fl<tspan class="cls-4" x="82.38" y="0">exisaf</tspan></text>
+</svg>
