@@ -1,12 +1,41 @@
 import React from 'react';
-import {Layout, Box, Cage, HomeWrapper, theme, themeColor, Button, DarkWrapper, Grid, Nav} from '../../components';
+import styled from 'styled-components';
+import { Box, Button, Cage, Grid, GridWrapper, Layout, Nav, theme, themeColor } from '../../components';
 import Image from '../../assets/image.svg';
 import Admin from '../../assets/Admin.svg';
 import Book from '../../assets/boook.svg';
 import hands from '../../assets/hands.svg';
 import LogoB from '../../assets/logoB.svg';
-import LogoA from '../../assets/logoA.svg';
+import Logo from '../../assets/Logo.svg';
+import  "../../components/fonts/fontello/css/flex.css";
 
+const HomeWrapper = styled.div`
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    &::before {
+        background-color: ${themeColor};
+        content: "";
+        border-radius: 15px;
+        position: absolute;
+        height: 60%;
+        width: 100%;
+        bottom: -8%;
+        right: 8%;            
+        transform: rotate(5deg)
+    }        
+`
+const DarkWrapper = styled.div`
+    background: ${themeColor};
+    line-height: 20px;
+
+    & p {
+        padding: 20px;
+        color: #fff;
+    }
+`
 
 export const Home = () => {
     return (
@@ -38,6 +67,7 @@ export const Home = () => {
                             <p>Our Solutions are guaranteed to save you time,
                                 reduce expenses and boost efficiency.
                             </p>
+                            <Box height='30' />
                             <Button>Learn more</Button>
                         </Box> 
                         <Box align='flex-end'>
@@ -45,11 +75,12 @@ export const Home = () => {
                         </Box>    
                     </Grid>                   
                 </Box>
-                <Box height='600'>
+                <Box height='600'>  
                     <h3 style={{color: '#fff'}}>
                         you need us if you
-                    </h3>
-                        <Grid default='repeat(3, 1fr)' height='400px' >
+                    </h3>                        
+                       
+                        <Grid height='400px'>  <GridWrapper default='repeat(3, 1fr)'>                          
                         <Box bg={theme.secColor} height='400' grid>
                             <h3>own this</h3>
                             <img src={Admin} alt="logo"/>
@@ -74,18 +105,20 @@ export const Home = () => {
                                     is strategically aligned  to meet your education vision
                                 </p>
                         </Box>
-                    </Grid>
+                        </GridWrapper></Grid>
+                    
                 </Box>
                 </Cage>
             </HomeWrapper>
             {/* FEATURED SOLUTIONS */}
             <Cage>
-                <Box height="600">
+                <Box height="550">
                     <h3>featured solutions</h3>
                     <p className='soln'>Having understood the very core of your needs, our solutions 
                         are tailored specifically for you. <br/>Make an investment in solutions
                          that evolve with requirements, needs, policies and trends                        
                     </p>
+                    <Box height='30'></Box>
                     <Grid default='repeat(3, 1fr)' height='360px'>
                         <Box grid align='center'>
                             <img src="https://flexisaf.com/wp-content/uploads/2015/10/skools-logo-1.png" width='250' alt="skools-logo" />
@@ -119,7 +152,7 @@ export const Home = () => {
             </Cage>
             <DarkWrapper >
                 <Cage>
-                    <Box height="150" bg={themeColor} row>
+                    <Grid default='repeat(3, 1fr)' bg={themeColor} >
                         <p>
                             Our clients are part of the FlexiSAF family. We stick with you and
                              evolve together providing solutions that are tailored specifically for you.
@@ -131,40 +164,54 @@ export const Home = () => {
                         <p>With us, the possibilities are endless because we understand the very core
                              of your needs. As your needs broaden, so does our solutions.
                         </p>
-                    </Box >
+                    </Grid >
                 </Cage>
                 </DarkWrapper>
                 {/*FOOTER */}
             <Cage>
-                {/* <Box height='30' /> */}
-                <Nav height="250" >                    
-                    <Box align='flex-start'>
-                        <img src={LogoA} alt="logo" width='200'/>
-                        <p>Copyright 2020 -FlexiSAF Edusoft Limited. No. 3 Egbedi Close,
-                            off Samuel Ladoke Akintola Boulevard, Garki 2, Abuja, Nigeria.
-                        </p>
-                    </Box>
-                    <Grid default='repeat(3, 1fr)'>                        
-                        <Box align='flex-start' textAlign='left' height= '200'>
+                <Box height="250" > 
+                    <Grid default='repeat(5, 1fr)'>                     
+                        <Box align='flex-start'>
+                            <img src={Logo} alt="logo" width='150'/>                            
+                     </Box>
+                        <Box />               
+                        <Box align='flex-start' textAlign='left' height= '150'>
                             <h3>Company</h3>                            
                             <p>About Us</p>
                             <p>History</p>
                             <p>Contact Us</p>
                         </Box>
-                        <Box align='flex-start' textAlign='left' height='200'>
+                        <Box align='flex-start' textAlign='left' height='150'>
                             <h3>solutions</h3>
                             <p>SAFSMS</p>
                             <p>Skools.ng</p>
                             <p>SRMS</p>
                         </Box>
-                        <Box align='flex-start' textAlign='left' height='200'>
+                        <Box align='flex-start' textAlign='left' height='150'>
                             <h3>connect</h3>                            
                             <p>Blogs</p>
                             <p>Support</p>
                             <p>Careers</p>     
                         </Box>
                     </Grid>
-                </Nav>
+                    <Grid default='2fr 1fr 3fr'>
+                        <Box textAlign='left'>
+                            <p className=''>FlexiSAF Edusoft Limited © 2020. All Rights reserved
+                            </p>
+                        </Box>
+                        <Box/>
+                        <Box row align='flex-end'>
+                            {/* <span > */}
+                                <i class="icon-instagram"></i>
+                                <i class="icon-facebook"></i> 
+                                <i class="icon-twitter"></i>
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-youtube-play"></i>
+                                <i class="icon-gplus"></i>
+                            {/* </span> */}
+                        </Box>
+                    </Grid>
+                </Box>
             </Cage>            
         </Layout>
     )

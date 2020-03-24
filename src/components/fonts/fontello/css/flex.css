@@ -28,9 +28,11 @@
  
   display: inline-block;
   text-decoration: inherit;
+  /* font -size: 16px; */
   width: 1em;
-  margin-right: .2em;
-  text-align: center;
+  /* margin-right: .5em; */
+  text-align: right;
+  color: #17255A;
   /* opacity: .8; */
  
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -42,7 +44,7 @@
  
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  margin-left: 0.5em;
  
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -55,14 +57,46 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-logo:before { content: '\e801'; } /* '' */
-.icon-firefox:before { content: '\e840'; } /* '' */
-.icon-chrome:before { content: '\e841'; } /* '' */
+.icon-logo:before { content: '\e801';  } /* '' */
+.icon-firefox:before {
+  content: '\e840';
+}
+
+/* '' */
+.icon-chrome:before {
+  content: '\e841';
+}
+
+/* '' */
 .icon-opera:before { content: '\e842'; } /* '' */
 .icon-ie:before { content: '\e843'; } /* '' */
-.icon-youtube-play:before { content: '\f16a'; } /* '' */
-.icon-twitter:before { content: '\f309'; } /* '' */
-.icon-facebook:before { content: '\f30c'; } /* '' */
-.icon-gplus:before { content: '\f30f'; } /* '' */
-.icon-linkedin:before { content: '\f318'; } /* '' */
-.icon-instagram:before { content: '\f32d'; } /* '' */
+.icon-youtube-play:before {
+  content: '\f16a';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\f309';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\f30c';
+}
+
+/* '' */
+.icon-gplus:before {
+  content: '\f30f';
+}
+
+/* '' */
+.icon-linkedin:before {
+  content: '\f318';
+}
+
+/* '' */
+.icon-instagram:before {
+  content: '\f32d';
+}
+
+/* '' */

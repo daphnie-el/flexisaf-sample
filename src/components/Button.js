@@ -1,5 +1,5 @@
 import styled  from 'styled-components'; 
-import { themeColor } from './theme';
+import { theme, themeColor } from './theme';
 
 export const Button = styled.button`
     padding: 15px;
@@ -7,6 +7,6 @@ export const Button = styled.button`
     color: #fff;
     background-color: ${themeColor};
     border: none;
-    border-radius: 5px;
+    border-radius: ${theme.borderRadius};
     font-size: 16px;
 `

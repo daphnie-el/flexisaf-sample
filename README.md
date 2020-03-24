@@ -1,3 +1,9 @@
+This project is a redo of (https://flexisaf.com/).
+
+The U.I mock up was created by https://github.com/daphnie-el it can be found at (https://www.figma.com/file/fYxDSdGqiXIxt6k8m3Nz4w/Flexisaf?node-id=0%3A1).
+
+All styles were created with Styled-component.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

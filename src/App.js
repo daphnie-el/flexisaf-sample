@@ -1,6 +1,6 @@
 import React from 'react';
 import {Home} from './containers/home';
-// import "./fontello/css";
+import "./components/fonts/fontello/css/flex.css";
 
 function App() {
   return (

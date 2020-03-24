@@ -16,7 +16,7 @@ export const Box = styled.div`
     flex-direction: ${props => props.row ? "row" : "column"};
     justify-content: ${props => props.row ? "space-between" : "center"};
     align-items: ${props => props.align};
-    height: ${props => props.height}px;
+    min-height: ${props => props.height}px;
     background-color: ${props => props.bg || 'inherit'};
     margin: 0;
     font-size: ${props => props.fontSize || 'inherit'};
@@ -24,15 +24,15 @@ export const Box = styled.div`
     color: ${themeColor};
     position: relative;
     text-align: ${props => props.textAlign || theme.textAlign};
-    /* padding: ${props => props.pad || 0 }; */
-    border-radius: ${props => props.grid ? '5px' : 'none'};
-    box-shadow: ${props => props.grid ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : "none" }; 
+    border-radius: ${props => props.grid ? theme.borderRadius : 'none'};
+    box-shadow: ${props => props.grid ? '0px 4px 10px rgba(0, 0, 0, 0.25)' : "none" };
     
     & h1 {
         font-size: 48px;
         color: ${ themeColor };
         font-family: 'Montserrat';
         font-weight: bold;
+        margin-bottom: 0;
     }
     & h3 {
         font-size: 24px;
@@ -42,17 +42,26 @@ export const Box = styled.div`
     & p {
         font-size: 16px;
         color: ${theme.color};
+        margin-bottom: 0;
+        line-height: 20px;
     } 
      & span {
         text-align: right;
         padding: 10px;
-        margin-left: 20px
+        margin-left: 20px;
+        /* border-top: ${props => props.top ? '1px solid #17255a' : 'none'}; */
     }  
 
     & .soln {
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
         }
+    & .copyright {
+        width: 200px;
+        float: left;
+        font-size: 8px;
+        line-height: normal;
+    }
     & ul {
         list-style: none;
     }
@@ -60,56 +69,42 @@ export const Box = styled.div`
 
 
 export const Cage = styled.div`
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     height: 100%;
-`
-export const HomeWrapper = styled.div`
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    &::before {
-        background-color: ${themeColor};
-        content: "";
-        border-radius: 15px;
-        position: absolute;
-        height: 60%;
-        width: 100%;
-        bottom: -9%;
-        right: 8%;            
-        transform: rotate(5deg)
-    }  
-      
-`
-export const DarkWrapper = styled.div`
-    display: inline-flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: ${themeColor};
+    @media (max-width: 768px) {
+     max-width: inherit;    
+  }
+   @media (max-width: 992) {
+     width: 800;    
+  }
 
-    & p {
-        width: 30%;
-        padding: 20px;
-        color: #fff;
-    }
 `
+
 export const Grid = styled.div`
     display: inline-grid;
     height: ${props => props.height || 'inherit'};
     text-align: ${props => props.textAlign || theme.textAlign};
+    grid-template-columns: ${props => props.default};
     grid-gap: 50px;
-    grid-template-columns: ${props => props.default};  
     font-size: inherit;
     position: relative;    
 
-  /* & :nth-child(2){
-      margin-top: 30px;
-  } */
+  @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+  }
+   @media (max-width: 992) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+  
 `
+export const GridWrapper = styled(Grid)`
+    & :nth-child(2){
+      margin-top: 30px;
+  }
+`
+
 export const Nav = styled(Box)`
  display: flex;
  flex-direction: row;
